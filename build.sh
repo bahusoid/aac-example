@@ -13,7 +13,7 @@ if [ ! -f "${FDK_AAC_LIB_INSTALL_DIR}/lib/libfdk-aac.a" ]; then
     git clone ${FDK_AAC_REPO} ${FDK_AAC_SRC_DIR}
     cd ${FDK_AAC_SRC_DIR}
     ./autogen.sh
-    ./configure --prefix=${FDK_AAC_LIB_INSTALL_DIR} 
+    ./configure --prefix=${FDK_AAC_LIB_INSTALL_DIR} CXXFLAGS=-g CFLAGS=-g
     make
     make install
 fi
